@@ -36,12 +36,13 @@ router.get("/:id", (req, res) => {
         attributes: ['product_name']
       }
     ]
+  })
     .then((dbTagData) => res.json(dbTagData))
     .catch((err) => {
       console.log(err);
       res.status(400).json(err);
     })
-})
+
 });
 
 router.post("/", (req, res) => {
